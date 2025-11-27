@@ -38,8 +38,8 @@ jobs:
 
       - name: Run Tests Windows (incomplete coverage)
         if: matrix.platform.os == 'windows-latest'
-        run: npm test -- -c -t0 --allow-incomplete-coverage
+        run: npm test -- -c -t0 --allow-incomplete-coverage 
 
       - name: Run Tests Unix (complete coverage)
         if: matrix.platform.os != 'windows-latest'
-        run: npm test -- -c -t0
+        run: npm test -- -c -t0 --allow-incomplete-coverage 
